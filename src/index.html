@@ -19,19 +19,19 @@
       <div class="blocks">
         <label>
           Surname:
-          <input type="text" name="surname" required>
+          <input type="text" name="surname" required autocomplete="off">
         </label>
       </div>
       <div class="blocks">
         <label>
           Name:
-          <input type="text" name="firstName">
+          <input type="text" name="firstName" required autocomplete="off">
         </label>
       </div>
       <div class="blocks">
         <label>
           How old are You?
-          <input type="number" name="age" value="12" data-qa="field-value">
+          <input type="number" name="age" value="12" data-qa="field-value" min="1">
         </label>
       </div>
       <div class="blocks">
@@ -52,13 +52,13 @@
       <div class="blocks">
         <label>
           E-mail:
-          <input type="email" name="email" placeholder="email@example.com" data-qa="field-placeholder">
+          <input type="email" name="email" placeholder="email@example.com" data-qa="field-placeholder" required>
         </label>
       </div>
       <div class="blocks">
         <label>
           Password:
-          <input type="password" name="password">
+          <input type="password" name="password" minlength="8" maxlength="16" required>
         </label>
       </div>
     </fieldset>
@@ -89,7 +89,7 @@
       <div class="blocks">
         <label>
           What your favorite brand of cars?
-          <select name="cars" size="4">
+          <select name="cars" size="4" multiple>
             <option value="BMW">BMW</option>
             <option value="Audi">Audi</option>
             <option value="Lada">Lada</option>
@@ -109,14 +109,14 @@
       <div class="blocks">
         <label>
           Comments:
-          <textarea type="textarea" rows="2"></textarea>
+          <textarea type="textarea" rows="2" maxlength="250"></textarea>
         </label>
       </div>
       <div class="blocks">
         <label>
           Would you recommend us?
-          <select name="chose-Yes-or-No">
-            <option value="yes">yes</option>
+          <select name="chose-Yes-or-No" required>
+            <option value="yes" selected>yes</option>
             <option value="no">no</option>
           </select>
         </label>
